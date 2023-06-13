@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="block"></div>
+
+<script>
+    let x = 650
+    let y = 400
+
+    function setX(x) {
+        document.getElementById('block').style.left = x + 'px'
+    }
+
+    function setY(y) {
+        document.getElementById('block').style.top = y + 'px'
+    }
+
+    setX(x)
+    setY(y)
+
+    document.addEventListener('keydown', function (click) {
+        if (click.code === 'ArrowUp') {
+            document.getElementById('block').classList.add('transition')
+            y -= 300
+            setY(y)
+
+            setTimeout(function () {
+                document.getElementById('block').classList.remove('transition')
+                y += 300
+                setY(y)
+            }, 500);
+        }
+    })
+    // объеденить два хтмл кода и 2 этапом сделать игровое поле
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .elem{
+            width: 40px;
+            height: 40px;
+            background-image: url("images/Слой 2.png");
+            position: absolute;
+            margin-top: 40px;
+
+        }
+        .elem2{
+            width: 40px;
+            height: 80px;
+            background-image: url("images/Слой 2.png");
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+<div id="body"></div>
+
+<script>
+
+    let array = []
+
+    let index = 1
+    function levels(level){
+        let v = {
+            id: 'circle' + index,
+            x: 0,
+            y: 400,
+            level: level,
+        }
+        index++
+
+        let div = document.createElement('div')
+        div.id = v.id
+        div.classList.add(level === 1 ? 'elem' : 'elem2');
+        document.getElementById('body').append(div)
+
+        array.push(v)
+    }
+
+    setInterval(function (){
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * 2);
+        }
+        let number = getRandomInt(2)
+        if (number === 0){
+            levels(1)
+        }else if (number === 1){
+            levels(2)
+        }
+    },3000)
+
+    setInterval(function  (v,x) {
+        for (let i = 0; i < array.length; i++) {
+            let v = array[i];
+            v.x += 20;
+            document.getElementById(v.id).style.right = v.x + 'px';
+            document.getElementById(v.id).style.top = v.y + 'px';
+        }
+    },100)
+
+
+</script>
+
+</body>
+</html>

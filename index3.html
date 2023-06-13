@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #block1 {
+            width: 40px;
+            height: 40px;
+            background-color: #f69906;
+            position: absolute;
+        }
+
+        #block2 {
+            width: 40px;
+            height: 40px;
+            background-color: chartreuse;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<div id="block1"></div>
+<div id="block2"></div>
+
+<script>
+    document.getElementById('block1').style.top = 300 + 'px'
+    document.getElementById('block1').style.left = 580 + 'px'
+    document.getElementById('block2').style.top = 300 + 'px'
+    document.getElementById('block2').style.left = 620 + 'px'
+    const block1Left = parseInt(document.getElementById('block1').style.left, 10);
+    const block1Top = parseInt(document.getElementById('block1').style.top, 10);
+    const block2Left = parseInt(document.getElementById('block2').style.left, 10);
+    const block2Top = parseInt(document.getElementById('block2').style.top, 10);
+
+    if (
+        block1Left >= block2Left - 40 &&
+        block1Left <= block2Left + 40 &&
+        block1Top >= block2Top - 40 &&
+        block1Top <= block2Top + 40
+    ) {
+        alert('Error');
+    }
+
+</script>
+</body>
+</html>

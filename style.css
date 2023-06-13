@@ -1,0 +1,31 @@
+.elem{
+    width: 40px;
+    height: 40px;
+    background-image: url("images/Слой 2.png");
+    position: absolute;
+    margin-top: 40px;
+
+}
+.elem2{
+    width: 40px;
+    height: 80px;
+    background-image: url("images/Слой 2.png");
+    position: absolute;
+}
+
+#block {
+    width: 40px;
+    height: 40px;
+    background-color: chartreuse;
+    position: absolute;
+    border-radius: 20px;
+    /*transition: 0.5s cubic-bezier(0.33, 0, 0.68, 0);
+
+     */
+}
+.transition{
+ /*   transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1) !important;
+
+  */
+    background-color: blue !important;
+}
