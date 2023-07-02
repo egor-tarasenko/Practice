@@ -77,72 +77,12 @@ select {
     }
 }
 
-
-
-.wrapper{
-    z-index: 5;
-    width: 100%;
-    height: 100vh;
-    background-image: url("images/1663870550_15-phonoteka-org-p-fon-gd-oboi-15.jpg");
-    background-size: 100%;
+body {
+    background-color: #223344;
 }
 
-.elem{
-    width: 40px;
-    height: 40px;
-    background-image: url("images/Слой 2.png");
-    position: absolute;
-    margin-top: 40px;
-    z-index: 1;
-
-}
-.elem2{
-    width: 40px;
-    height: 80px;
-    background-image: url("images/Слой 2.png");
-    position: absolute;
-    z-index: 1;
-}
-
-#block {
-    width: 40px;
-    height: 40px;
-    background-image: url("images/y.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    /*transition: 0.5s cubic-bezier(0.33, 0, 0.68, 0);
-
-     */
-}
-.transition{
- /*   transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1) !important;
-
-  */
-}
-.wrapper-life{
-    opacity: 70%;
-    position: absolute;
-    width: 100px;
-    height: 60px;
-    background: linear-gradient(to bottom right, purple, pink);
-    border-radius: 10px;
-    left: 20px;
-    top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow:0 0 20px #555;
-    caret-color: transparent;
-}
-.wrapper-life-img{
-    width: 20px;
-    height: 20px;
-    background-image: url("images/heart.png");
-    background-size: 100%;
-}
 .game-over-block {
-    display: none;
+    position: absolute;
     margin: 0 auto;
     width: 400px;
     height: 500px;
@@ -151,7 +91,6 @@ select {
     opacity: 80%;
     border-radius: 10px;
     box-shadow:0 0 30px #5590ff;
-    z-index: 9999;
 }
 
 .game-over-wrapper {
