@@ -45,7 +45,7 @@ setInterval(function () {
     for (let i = 0; i < array.length; i++) {
         let v = array[i]
         v.x += 20;
-        if (v.x > 1200) {
+        if (v.x > 1300) {
             array.splice(i, 1)
             let div = document.getElementById(v.id)
             if (div) {
